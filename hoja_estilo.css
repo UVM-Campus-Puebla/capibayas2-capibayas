@@ -1,0 +1,18 @@
+h1.saludo { 
+            background-color:pink;
+            text-align: center;
+        }
+body{
+            background-color: violet;
+    }
+h1.alineacion{
+    text-align: center;
+}
+img{
+    margin: 0 auto;
+    width: 300px;
+}
+a.enlace{
+    margin: 0 auto;
+    text-align: center ;
+}
