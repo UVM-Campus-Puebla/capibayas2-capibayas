@@ -3,7 +3,7 @@ h1.saludo {
             text-align: center;
         }
 body{
-            background-color: rgb(93, 36, 105);
+            background-color: rgb(6, 64, 43);
     }
 h1.alineacion{
     text-align: center;
@@ -17,3 +17,4 @@ a.enlace{
     margin: 0 auto;
     text-align: center ;
 }
+
