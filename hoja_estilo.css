@@ -1,20 +1,19 @@
 h1.saludo { 
-            background-color:pink;
+            background-color:rgb(45, 146, 197);
             text-align: center;
         }
 body{
-            background-color: green;
+            background-color: rgb(93, 36, 105);
     }
 h1.alineacion{
     text-align: center;
+    background-color: aquamarine;
 }
 img{
     margin: 0 auto;
-    width: 300px;
+    width: 600px;
 }
 a.enlace{
     margin: 0 auto;
     text-align: center ;
-
 }
-
