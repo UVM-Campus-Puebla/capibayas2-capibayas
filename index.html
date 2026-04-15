@@ -1,101 +1,475 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Hoja de estilo de bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Nombre que va a aparecer en el navegador-->
-    <title>Inicio</title>
-    <!-- Hoja de estilo en CSS-->
-    <link rel="stylesheet" href="hoja_estilo.css">
-    <!--Plantilla Java para que funcione todo lo que traigan de bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-  <!--div es un contenedor, se usa para colocar contenido en un pequeño espacio y sea mas facil aoomodarlo -->
-    <div class="container bg-primary">
-      <!-- Etiqueta de titulo-->
-        <h1 class="alineacion">Basura con Consciencia</h1>
-    </div>
-    <h1 class="saludo">Proyecto de Desarrollo Sostenible</h1>
-    <div class="container bg-danger text-center p-3" style="max-width: 400px;">
-      <!--Imagen almacenada en la carpeta -->
-        <img src="bienvenida.png" class="img-fluid">
-    </div>
-    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-        Más información:
-    </div>
+    <title>Basura Con Conciencia | ODS 12</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <div class="container">
-  <div class="row">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        eco: {
+                            light: '#e8f5e9',
+                            DEFAULT: '#4caf50',
+                            dark: '#2e7d32',
+                            accent: '#8bc34a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animaciones personalizadas */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .pulse-soft {
+            animation: pulse-soft 2s infinite;
+        }
+        @keyframes pulse-soft {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
 
-    <div class="col-md-3">
-      <div class="card">
-        <img src="mundo.png" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Update</h5>
-          <p class="card-text">Texto de ejemplo para la tarjeta</p>
-          <a href="pagina2.html" class="btn btn-primary">Ir</a>
-        </div>
-      </div>
-    </div>
+        /* Estilos para el juego interactivo */
+        .bin-card {
+            transition: all 0.3s ease;
+        }
+        .bin-card.highlight {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        .bin-card.dim {
+            opacity: 0.4;
+            transform: scale(0.95);
+        }
 
-    <div class="col-md-3">
-      <div class="card">
-        <img src="mundo.png" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Update</h5>
-          <p class="card-text">Texto de ejemplo para la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir</a>
-        </div>
-      </div>
-    </div>
+        /* Fondo dinámico */
+        .bg-pattern {
+            background-color: #f0fdf4;
+            background-image: radial-gradient(#86efac 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-pattern antialiased">
 
-    <div class="col-md-3">
-      <div class="card">
-        <img src="mundo.png" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Delete</h5>
-          <p class="card-text">Texto de ejemplo para la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card">
-        <img src="mundo.png" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">insert</h5>
-          <p class="card-text">Texto de ejemplo para la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    <br>
-        <!-- acordeon que oculta y muestra informacion-->
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                   <!--NOmbre del acordeon--> ¿Qué es Basura con Consciencia?
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <!-- contenido del acordeon-->Este es un proyecto escolar destinado a generar consciencia sobre la separación de la basura en las instituciones, entre la orgánica, inorgánica, e inorgánica valorizada, y difundir información sobre su objetivo y ventajas.
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="bg-eco text-white p-2 rounded-full">
+                        <i class="fa-solid fa-leaf text-xl"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-eco-dark tracking-tight">Basura Con Conciencia</span>
                 </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Inicio</a>
+                    <a href="#ods" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">El ODS 12</a>
+                    <a href="#clasificacion" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Clasificación</a>
+                    <a href="#interactivo" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Aprende</a>
                 </div>
-            </div> 
+                <!-- Botón móvil -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-eco-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-   
-  
-</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-eco-light text-eco-dark font-semibold px-4 py-2 rounded-full mb-6 border border-eco/30">
+                        <i class="fa-solid fa-graduation-cap mr-2"></i> Proyecto Académico Sostenible
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Transformando nuestra escuela, <span class="text-transparent bg-clip-text bg-gradient-to-r from-eco-dark to-eco-accent">un residuo a la vez.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Implementamos un sistema inteligente y consciente de separación de basura para reducir nuestra huella de carbono y fomentar la educación ambiental en nuestra comunidad.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#clasificacion" class="bg-eco-dark text-white px-8 py-3 rounded-full font-semibold hover:bg-eco transition-colors shadow-lg shadow-eco/30 flex items-center gap-2">
+                            Aprender a separar <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#interactivo" class="bg-white text-eco-dark border-2 border-eco-dark px-8 py-3 rounded-full font-semibold hover:bg-eco-light transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-gamepad"></i> Juega y aprende
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <!-- Ilustración abstracta interactiva hecha con CSS/HTML -->
+                    <div class="relative w-full h-96 bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute top-10 left-10 text-eco opacity-20 floating" style="animation-delay: 0s;"><i class="fa-solid fa-leaf text-6xl"></i></div>
+                        <div class="absolute bottom-10 right-10 text-blue-500 opacity-20 floating" style="animation-delay: 1s;"><i class="fa-solid fa-bottle-water text-6xl"></i></div>
+                        <div class="absolute top-1/2 right-20 text-yellow-500 opacity-20 floating" style="animation-delay: 2s;"><i class="fa-solid fa-box text-5xl"></i></div>
+                        
+                        <div class="text-center z-10 relative">
+                            <div class="w-40 h-40 mx-auto bg-gradient-to-br from-eco-light to-eco rounded-full flex items-center justify-center pulse-soft shadow-xl border-4 border-white mb-6">
+                                <i class="fa-solid fa-recycle text-6xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Cero Residuos</h3>
+                            <p class="text-gray-500 mt-2">Nuestra meta para el 2030</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ODS 12 Section -->
+    <section id="ods" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="ODS 12" class="w-32 h-32 mx-auto mb-6 rounded-lg shadow-md hover:scale-105 transition-transform" onerror="this.src=''; this.className='hidden'; document.getElementById('ods-fallback').classList.remove('hidden');">
+                <div id="ods-fallback" class="hidden w-32 h-32 mx-auto mb-6 bg-yellow-600 rounded-lg shadow-md flex items-center justify-center text-white text-center p-2 font-bold text-xl">
+                    ODS 12
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Producción y Consumo Responsables</h2>
+                <div class="w-20 h-1 bg-eco mx-auto mb-6 rounded"></div>
+                <p class="text-lg text-gray-600">
+                    Las instituciones educativas generan toneladas de residuos diariamente. El objetivo de <strong>Basura Con Conciencia</strong> es alinear nuestras acciones con el ODS 12 de la ONU, reduciendo la generación de desechos mediante actividades de prevención, reducción, reciclado y reutilización.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-eco-light w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-book-open text-eco-dark text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Educación</h3>
+                    <p class="text-gray-600">Crear conciencia en los estudiantes sobre el ciclo de vida de los productos que consumen en el campus.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-arrows-rotate text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Acción</h3>
+                    <p class="text-gray-600">Proveer la infraestructura adecuada (botes con código de color) para facilitar la separación en los pasillos y cafeterías.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-chart-line text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Impacto</h3>
+                    <p class="text-gray-600">Medir y reportar la cantidad de material reciclado mensualmente para fomentar la motivación en la comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema de Clasificación -->
+    <section id="clasificacion" class="py-20 bg-eco-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestro Sistema de Separación</h2>
+                <p class="text-eco-light text-lg max-w-2xl mx-auto">
+                    Conoce los contenedores que encontrarás en la institución. Una correcta separación es el primer paso hacia la economía circular.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Contenedor Verde -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-green-500 h-4 w-full"></div>
+                    <div class="p-6 text-center">
+                        <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-apple-whole text-3xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-600 mb-2">Orgánicos</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20">Restos de comida, cáscaras de frutas, restos de café, bolsitas de té, hojas secas.</p>
+                        <div class="text-xs bg-green-50 text-green-700 py-2 px-3 rounded-lg font-medium">
+                            <i class="fa-solid fa-check mr-1"></i> Se usarán para composta escolar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor Azul -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-blue-500 h-4 w-full"></div>
+                    <div class="p-6 text-center">
+                        <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-bottle-water text-3xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Reciclables</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20">Botellas de plástico (PET), latas de aluminio, envases de vidrio, tetra pak limpios.</p>
+                        <div class="text-xs bg-blue-50 text-blue-700 py-2 px-3 rounded-lg font-medium">
+                            <i class="fa-solid fa-check mr-1"></i> Deben estar vacíos y aplastados.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor Amarillo/Cartón -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-yellow-400 h-4 w-full"></div>
+                    <div class="p-6 text-center">
+                        <div class="w-20 h-20 mx-auto bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-box text-3xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-600 mb-2">Papel y Cartón</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20">Hojas de papel de cuadernos, cartulinas, cajas de cartón, periódicos limpios.</p>
+                        <div class="text-xs bg-yellow-50 text-yellow-700 py-2 px-3 rounded-lg font-medium">
+                            <i class="fa-solid fa-xmark mr-1"></i> No incluir papel higiénico ni sucio.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor Gris -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-500 h-4 w-full"></div>
+                    <div class="p-6 text-center">
+                        <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-trash-can text-3xl text-gray-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-700 mb-2">No Reciclables</h3>
+                        <p class="text-sm text-gray-600 mb-4 h-20">Envolturas de frituras, servilletas sucias, papel higiénico, chicles, unicel.</p>
+                        <div class="text-xs bg-gray-100 text-gray-700 py-2 px-3 rounded-lg font-medium">
+                            <i class="fa-solid fa-circle-exclamation mr-1"></i> Terminan en el relleno sanitario.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Interactiva: El Clasificador -->
+    <section id="interactivo" class="py-20 bg-pattern">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-green-100">
+                <div class="bg-gradient-to-r from-eco-dark to-eco p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold mb-2"><i class="fa-solid fa-gamepad mr-2"></i> Práctica: El Clasificador</h2>
+                    <p class="text-green-50">Selecciona un residuo y descubre a qué contenedor pertenece.</p>
+                </div>
+                
+                <div class="p-8">
+                    <!-- Área de selección -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-10" id="item-buttons">
+                        <!-- Botones generados por JS -->
+                    </div>
+
+                    <!-- Mensaje de resultado -->
+                    <div id="resultado-box" class="hidden text-center mb-10 p-6 rounded-2xl border-2 transition-all duration-300">
+                        <div id="resultado-icono" class="text-5xl mb-4"></div>
+                        <h3 id="resultado-titulo" class="text-2xl font-bold mb-2"></h3>
+                        <p id="resultado-texto" class="text-lg"></p>
+                    </div>
+
+                    <!-- Contenedores Visuales -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div id="bin-organico" class="bin-card bg-gray-50 border-2 border-green-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
+                            <i class="fa-solid fa-leaf text-3xl text-green-500"></i>
+                            <span class="font-bold text-green-600">Orgánico</span>
+                        </div>
+                        <div id="bin-reciclable" class="bin-card bg-gray-50 border-2 border-blue-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
+                            <i class="fa-solid fa-recycle text-3xl text-blue-500"></i>
+                            <span class="font-bold text-blue-600">Reciclable</span>
+                        </div>
+                        <div id="bin-papel" class="bin-card bg-gray-50 border-2 border-yellow-400 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
+                            <i class="fa-solid fa-scroll text-3xl text-yellow-500"></i>
+                            <span class="font-bold text-yellow-600">Papel/Cartón</span>
+                        </div>
+                        <div id="bin-noreciclable" class="bin-card bg-gray-50 border-2 border-gray-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
+                            <i class="fa-solid fa-trash text-3xl text-gray-500"></i>
+                            <span class="font-bold text-gray-600">No Reciclable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador de Impacto Estudiantil -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-bold text-gray-800 mb-10">Nuestro Impacto Este Semestre</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" id="stats-container">
+                <div class="p-6">
+                    <div class="text-5xl font-bold text-eco mb-2 stat-number" data-target="1540">0</div>
+                    <div class="text-gray-600 font-medium">Kilos de papel reciclado</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-5xl font-bold text-blue-500 mb-2 stat-number" data-target="850">0</div>
+                    <div class="text-gray-600 font-medium">Botellas de PET salvadas</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-5xl font-bold text-green-500 mb-2 stat-number" data-target="320">0</div>
+                    <div class="text-gray-600 font-medium">Kilos de composta generada</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-leaf text-eco"></i>
+                    <span class="font-bold text-xl text-white">Basura Con Conciencia</span>
+                </div>
+                <p class="text-sm text-gray-400">
+                    Un proyecto estudiantil dedicado a cumplir las metas del ODS 12 en nuestra institución. Cuidar el planeta comienza en nuestra propia escuela.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#inicio" class="hover:text-eco transition-colors">Inicio</a></li>
+                    <li><a href="#ods" class="hover:text-eco transition-colors">Acerca del ODS 12</a></li>
+                    <li><a href="#clasificacion" class="hover:text-eco transition-colors">Guía de Separación</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Únete al Comité Ambiental</h4>
+                <p class="text-sm text-gray-400 mb-4">¿Quieres ser voluntario para las campañas de reciclaje en el campus?</p>
+                <form class="flex gap-2" onsubmit="event.preventDefault(); alert('¡Gracias por tu interés! Te contactaremos pronto.');">
+                    <input type="email" placeholder="Tu correo estudiantil" class="px-4 py-2 w-full rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-eco" required>
+                    <button type="submit" class="bg-eco hover:bg-eco-light hover:text-eco-dark text-white px-4 py-2 rounded-lg transition-colors font-medium">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+            &copy; 2024 Proyecto Académico Basura Con Conciencia. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Script de Interactividad -->
+    <script>
+        // --- 1. Lógica del Juego "El Clasificador" ---
+        const items = [
+            { nombre: "Cáscara de Plátano", tipo: "organico", icon: "fa-solid fa-lemon" },
+            { nombre: "Lata de Refresco", tipo: "reciclable", icon: "fa-solid fa-prescription-bottle" },
+            { nombre: "Apuntes de Matemáticas", tipo: "papel", icon: "fa-solid fa-book" },
+            { nombre: "Envoltura de Papas", tipo: "noreciclable", icon: "fa-solid fa-candy-cane" },
+            { nombre: "Botella de Agua", tipo: "reciclable", icon: "fa-solid fa-bottle-water" },
+            { nombre: "Servilleta con Grasa", tipo: "noreciclable", icon: "fa-solid fa-toilet-paper" },
+            { nombre: "Restos de Manzana", tipo: "organico", icon: "fa-solid fa-apple-whole" },
+            { nombre: "Caja de Zapatos", tipo: "papel", icon: "fa-solid fa-box-open" },
+        ];
+
+        const configBins = {
+            "organico": { id: "bin-organico", colorClass: "border-green-500 bg-green-50 text-green-700", title: "¡Correcto! Es Orgánico", msg: "Los residuos orgánicos se transforman en composta para las áreas verdes de la escuela." },
+            "reciclable": { id: "bin-reciclable", colorClass: "border-blue-500 bg-blue-50 text-blue-700", title: "¡Excelente! Es Reciclable", msg: "Asegúrate de que esté vacío y aplastado para que ocupe menos espacio." },
+            "papel": { id: "bin-papel", colorClass: "border-yellow-400 bg-yellow-50 text-yellow-700", title: "¡Muy bien! Papel y Cartón", msg: "El papel limpio puede reciclarse varias veces salvando cientos de árboles." },
+            "noreciclable": { id: "bin-noreciclable", colorClass: "border-gray-500 bg-gray-100 text-gray-700", title: "¡Exacto! No es reciclable", msg: "Estos residuos no se pueden procesar. ¡Intenta reducir el consumo de estos productos!" }
+        };
+
+        const buttonsContainer = document.getElementById('item-buttons');
+        const resultadoBox = document.getElementById('resultado-box');
+        const resultadoIcono = document.getElementById('resultado-icono');
+        const resultadoTitulo = document.getElementById('resultado-titulo');
+        const resultadoTexto = document.getElementById('resultado-texto');
+
+        // Generar botones
+        items.forEach((item, index) => {
+            const btn = document.createElement('button');
+            btn.className = "bg-white border shadow-sm hover:shadow-md hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-full transition-all flex items-center gap-2";
+            btn.innerHTML = `<i class="${item.icon} text-gray-500"></i> ${item.nombre}`;
+            btn.onclick = () => clasificarItem(item);
+            buttonsContainer.appendChild(btn);
+        });
+
+        function clasificarItem(item) {
+            // Resetear contenedores
+            document.querySelectorAll('.bin-card').forEach(bin => {
+                bin.classList.remove('highlight');
+                bin.classList.add('dim');
+            });
+
+            // Resaltar contenedor correcto
+            const binInfo = configBins[item.tipo];
+            const activeBin = document.getElementById(binInfo.id);
+            activeBin.classList.remove('dim');
+            activeBin.classList.add('highlight');
+
+            // Mostrar mensaje
+            resultadoBox.className = `text-center mb-10 p-6 rounded-2xl border-2 transition-all duration-500 block ${binInfo.colorClass} animate-fade-in`;
+            resultadoIcono.className = `${item.icon} mb-4 text-5xl`;
+            resultadoTitulo.innerText = binInfo.title;
+            resultadoTexto.innerText = binInfo.msg;
+            
+            // Scroll suave hacia el resultado si estamos en móvil
+            if(window.innerWidth < 768) {
+                resultadoBox.scrollIntoView({behavior: "smooth", block: "nearest"});
+            }
+        }
+
+        // --- 2. Animación de los Contadores Estadísticos ---
+        const statsSection = document.getElementById('stats-container');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let animated = false;
+
+        function animateNumbers() {
+            statNumbers.forEach(stat => {
+                const target = +stat.getAttribute('data-target');
+                const duration = 2000; // ms
+                const increment = target / (duration / 16); // 60fps
+                
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.innerText = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer para activar contadores al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !animated) {
+                animateNumbers();
+                animated = true;
+            }
+        }, { threshold: 0.5 });
+        
+        if(statsSection) observer.observe(statsSection);
+
+        // --- 3. Navbar con fondo en scroll ---
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
 </body>
 </html>
 
