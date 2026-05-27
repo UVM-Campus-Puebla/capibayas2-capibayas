@@ -89,6 +89,7 @@
                     <a href="#ods" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">El ODS 12</a>
                     <a href="#clasificacion" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Clasificación</a>
                     <a href="#interactivo" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Aprende</a>
+                    <a href="#blog" class="text-gray-600 hover:text-eco-dark font-medium transition-colors">Blog</a>
                 </div>
                 <!-- Botón móvil -->
                 <div class="md:hidden flex items-center">
@@ -143,167 +144,174 @@
         </div>
     </section>
 
-    <!-- ODS 12 Section -->
-    <section id="ods" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="ODS 12" class="w-32 h-32 mx-auto mb-6 rounded-lg shadow-md hover:scale-105 transition-transform" onerror="this.src=''; this.className='hidden'; document.getElementById('ods-fallback').classList.remove('hidden');">
-                <div id="ods-fallback" class="hidden w-32 h-32 mx-auto mb-6 bg-yellow-600 rounded-lg shadow-md flex items-center justify-center text-white text-center p-2 font-bold text-xl">
-                    ODS 12
+    <!-- Sección de Blog / Artículo de Investigación -->
+    <section id="blog" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Encabezado del Blog -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-eco-light text-eco-dark font-semibold px-4 py-2 rounded-full mb-4 border border-eco/30 shadow-sm">
+                    <i class="fa-solid fa-newspaper mr-2"></i> Investigación y Normativa
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Producción y Consumo Responsables</h2>
-                <div class="w-20 h-1 bg-eco mx-auto mb-6 rounded"></div>
-                <p class="text-lg text-gray-600">
-                    Las instituciones educativas generan toneladas de residuos diariamente. El objetivo de <strong>Basura Con Conciencia</strong> es alinear nuestras acciones con el ODS 12 de la ONU, reduciendo la generación de desechos mediante actividades de prevención, reducción, reciclado y reutilización.
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blog Ambiental</h2>
+                <div class="w-20 h-1 bg-eco mx-auto rounded"></div>
+            </div>
+
+            <!-- Contenido del Artículo -->
+            <article class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 text-gray-700">
+                
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">Análisis Comparativo e Integración de Tres Fuentes Normativas para la Separación de Residuos en Instituciones Académicas</h3>
+                
+                <p class="mb-6 text-lg leading-relaxed">
+                    La transición hacia modelos de gestión ambiental en instituciones educativas es clave para la sustentabilidad urbana. Diferenciar entre "basura" (mezcla contaminante) y "residuo" (material valorizable) permite reincorporar recursos a la economía circular. Para estructurar este proceso, se analizan tres marcos institucionales:
                 </p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tarjeta 1 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div class="bg-eco-light w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-book-open text-eco-dark text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Educación</h3>
-                    <p class="text-gray-600">Crear conciencia en los estudiantes sobre el ciclo de vida de los productos que consumen en el campus.</p>
-                </div>
-                <!-- Tarjeta 2 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-arrows-rotate text-blue-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Acción</h3>
-                    <p class="text-gray-600">Proveer la infraestructura adecuada (botes con código de color) para facilitar la separación en los pasillos y cafeterías.</p>
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-chart-line text-yellow-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Impacto</h3>
-                    <p class="text-gray-600">Medir y reportar la cantidad de material reciclado mensualmente para fomentar la motivación en la comunidad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <ul class="space-y-4 mb-10 text-gray-700 bg-eco-light/30 p-6 rounded-2xl border border-eco/20">
+                    <li class="flex gap-4">
+                        <i class="fa-solid fa-book-bookmark text-eco-dark text-xl mt-1"></i>
+                        <span><strong>Guía del Área Metropolitana del Valle de Aburrá (Colombia):</strong> Centrada en procesos administrativos y en la jerarquía de la gestión (prevención, separación, almacenamiento y disposición) mediante un Plan de Manejo Integral de Residuos Sólidos (PMIRS).</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="fa-solid fa-book-bookmark text-eco-dark text-xl mt-1"></i>
+                        <span><strong>Manual del Ministerio del Medio Ambiente (Chile / Curanilahue):</strong> Enfocado en la participación comunitaria, la pedagogía de las "3R" (Reducir, Reutilizar, Reciclar) y la corresponsabilidad de estudiantes, docentes y auxiliares.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="fa-solid fa-book-bookmark text-eco-dark text-xl mt-1"></i>
+                        <span><strong>Guía de la Secretaría de Educación del Distrito (SED - Bogotá):</strong> Aporta rigor técnico para clasificar materiales (aprovechables, orgánicos y ordinarios) e integra la labor de asociaciones formales de recicladores de oficio.</span>
+                    </li>
+                </ul>
 
-    <!-- Sistema de Clasificación -->
-    <section id="clasificacion" class="py-20 bg-eco-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestro Sistema de Separación</h2>
-                <p class="text-eco-light text-lg max-w-2xl mx-auto">
-                    Conoce los contenedores que encontrarás en la institución. Una correcta separación es el primer paso hacia la economía circular.
+                <h4 class="text-xl font-bold text-eco-dark mt-10 mb-4 border-b border-gray-200 pb-2">Directrices Técnicas de Clasificación y Código de Colores</h4>
+                <p class="mb-6 leading-relaxed">
+                    La estandarización visual facilita la separación en la fuente al reducir la carga cognitiva del usuario. En Colombia, la Resolución 2184 de 2019 unificó el código de colores a nivel nacional, mientras que en Chile y México se utilizan enfoques adaptados a la infraestructura local.
                 </p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Contenedor Verde -->
-                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-green-500 h-4 w-full"></div>
-                    <div class="p-6 text-center">
-                        <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-apple-whole text-3xl text-green-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-green-600 mb-2">Orgánicos</h3>
-                        <p class="text-sm text-gray-600 mb-4 h-20">Restos de comida, cáscaras de frutas, restos de café, bolsitas de té, hojas secas.</p>
-                        <div class="text-xs bg-green-50 text-green-700 py-2 px-3 rounded-lg font-medium">
-                            <i class="fa-solid fa-check mr-1"></i> Se usarán para composta escolar.
-                        </div>
+                <!-- Tabla Responsiva -->
+                <div class="overflow-x-auto mb-10 rounded-xl border border-gray-200 shadow-sm">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-gray-100 text-gray-800 font-bold uppercase text-xs">
+                            <tr>
+                                <th class="px-6 py-4">Color del Contenedor</th>
+                                <th class="px-6 py-4">Tipo de Residuo</th>
+                                <th class="px-6 py-4">Ejemplos Comunes</th>
+                                <th class="px-6 py-4">Requerimiento Técnico</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-white hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold flex items-center gap-2"><div class="w-4 h-4 rounded-full border border-gray-300 bg-white shadow-inner"></div> Blanco</td>
+                                <td class="px-6 py-4">Aprovechables</td>
+                                <td class="px-6 py-4">Plástico, vidrio, metales, papel, cartón y envases Tetrapak</td>
+                                <td class="px-6 py-4 text-gray-600">Deben entregarse limpios y secos para no dañar las fibras de celulosa</td>
+                            </tr>
+                            <tr class="bg-green-50/50 hover:bg-green-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold flex items-center gap-2"><div class="w-4 h-4 rounded-full bg-green-500 shadow-inner"></div> Verde</td>
+                                <td class="px-6 py-4">Orgánicos aprovechables</td>
+                                <td class="px-6 py-4">Restos de comida cruda, cáscaras, restos de café y poda de jardines</td>
+                                <td class="px-6 py-4 text-gray-600">Destinados a compostaje o huertos escolares</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                                <td class="px-6 py-4 font-semibold flex items-center gap-2"><div class="w-4 h-4 rounded-full bg-gray-800 shadow-inner"></div> Negro</td>
+                                <td class="px-6 py-4">No aprovechables</td>
+                                <td class="px-6 py-4">Papel higiénico, servilletas usadas, cartón contaminado con comida, icopor</td>
+                                <td class="px-6 py-4 text-gray-600">Van directamente al relleno sanitario</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="text-xl font-bold text-eco-dark mt-10 mb-4 border-b border-gray-200 pb-2">Determinantes Conductuales en la Comunidad Estudiantil</h4>
+                <p class="mb-4 leading-relaxed">
+                    La infraestructura física es ineficaz sin un cambio de comportamiento. Un estudio en el Tecnológico Nacional de México (campus Ciudad Guzmán) identificó las principales barreras estudiantiles y sus soluciones:
+                </p>
+                <ul class="list-disc pl-6 space-y-3 mb-10 text-gray-700 marker:text-eco">
+                    <li><strong>Baja conciencia y hábitos débiles:</strong> La separación no es una prioridad diaria en el momento de desechar. <em>Solución:</em> Campañas dinámicas continuas y fortalecimiento de Proyectos Ambientales Escolares (PRAE).</li>
+                    <li><strong>Falta de infraestructura visible:</strong> Percepción de botes insuficientes o mal distribuidos. <em>Solución:</em> Distribución estratégica de contenedores en zonas de alto flujo (cafeterías y pasillos).</li>
+                    <li><strong>Desconfianza institucional:</strong> Creencia de que el personal de aseo mezcla los residuos al final. <em>Solución:</em> Transparencia en la cadena de custodia y entrega directa a recicladores.</li>
+                    <li><strong>Falta de información e incentivos:</strong> Dudas sobre empaques complejos y apatía general. <em>Solución:</em> Iconografía clara en los contenedores y otorgamiento de créditos académicos o recompensas.</li>
+                </ul>
+
+                <h4 class="text-xl font-bold text-eco-dark mt-10 mb-4 border-b border-gray-200 pb-2">Logística de Almacenamiento, Recolección y Enfoque de las "6R"</h4>
+                <p class="mb-6 leading-relaxed">
+                    El acopio temporal de residuos debe cumplir con estrictas normas sanitarias para evitar plagas y proteger los materiales. El área de almacenamiento debe estar aislada de las zonas pedagógicas, contar con ventilación, facilidad de limpieza, extintores y estibas para evitar el contacto de las bolsas con el suelo. La recolección interna debe programarse tras los descansos y usar bolsas que coincidan con el color del contenedor para asegurar la trazabilidad.
+                </p>
+                <p class="mb-4 font-semibold text-gray-800">Esta base logística permite implementar enfoques avanzados como las 6R (Rechazar, Reducir, Reusar, Reparar, Reciclar y actuar con Responsabilidad):</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+                        <h5 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-ban mr-1"></i> Rechazar y Reducir</h5>
+                        <p class="text-sm text-gray-700">Eliminar plásticos de un solo uso en cafeterías en un plazo de tres meses, priorizando utensilios reutilizables y compras con menor embalaje.</p>
+                    </div>
+                    <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                        <h5 class="font-bold text-blue-700 mb-2"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Reusar y Reparar</h5>
+                        <p class="text-sm text-gray-700">Utilizar materiales para proyectos escolares y reparar sistemáticamente mobiliario y equipos en lugar de desecharlos.</p>
+                    </div>
+                    <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+                        <h5 class="font-bold text-green-700 mb-2"><i class="fa-solid fa-hands-holding-circle mr-1"></i> Responsabilidad</h5>
+                        <p class="text-sm text-gray-700">Fomentar prácticas de conservación, como recolectar agua de lluvia para limpieza y monitorear consumos.</p>
                     </div>
                 </div>
 
-                <!-- Contenedor Azul -->
-                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-blue-500 h-4 w-full"></div>
-                    <div class="p-6 text-center">
-                        <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-bottle-water text-3xl text-blue-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Reciclables</h3>
-                        <p class="text-sm text-gray-600 mb-4 h-20">Botellas de plástico (PET), latas de aluminio, envases de vidrio, tetra pak limpios.</p>
-                        <div class="text-xs bg-blue-50 text-blue-700 py-2 px-3 rounded-lg font-medium">
-                            <i class="fa-solid fa-check mr-1"></i> Deben estar vacíos y aplastados.
-                        </div>
-                    </div>
-                </div>
+                <h4 class="text-xl font-bold text-eco-dark mt-10 mb-4 border-b border-gray-200 pb-2">Cuantificación del Impacto Climático, Pedagógico y Financiero</h4>
+                <p class="mb-6 leading-relaxed">La decisión de implementar un programa de separación de residuos en la fuente genera un impacto positivo multidimensional:</p>
 
-                <!-- Contenedor Amarillo/Cartón -->
-                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-yellow-400 h-4 w-full"></div>
-                    <div class="p-6 text-center">
-                        <div class="w-20 h-20 mx-auto bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-box text-3xl text-yellow-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-yellow-600 mb-2">Papel y Cartón</h3>
-                        <p class="text-sm text-gray-600 mb-4 h-20">Hojas de papel de cuadernos, cartulinas, cajas de cartón, periódicos limpios.</p>
-                        <div class="text-xs bg-yellow-50 text-yellow-700 py-2 px-3 rounded-lg font-medium">
-                            <i class="fa-solid fa-xmark mr-1"></i> No incluir papel higiénico ni sucio.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contenedor Gris -->
-                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-gray-500 h-4 w-full"></div>
-                    <div class="p-6 text-center">
-                        <div class="w-20 h-20 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-trash-can text-3xl text-gray-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-700 mb-2">No Reciclables</h3>
-                        <p class="text-sm text-gray-600 mb-4 h-20">Envolturas de frituras, servilletas sucias, papel higiénico, chicles, unicel.</p>
-                        <div class="text-xs bg-gray-100 text-gray-700 py-2 px-3 rounded-lg font-medium">
-                            <i class="fa-solid fa-circle-exclamation mr-1"></i> Terminan en el relleno sanitario.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Interactiva: El Clasificador -->
-    <section id="interactivo" class="py-20 bg-pattern">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-green-100">
-                <div class="bg-gradient-to-r from-eco-dark to-eco p-8 text-center text-white">
-                    <h2 class="text-3xl font-bold mb-2"><i class="fa-solid fa-gamepad mr-2"></i> Práctica: El Clasificador</h2>
-                    <p class="text-green-50">Selecciona un residuo y descubre a qué contenedor pertenece.</p>
+                <h5 class="font-bold text-lg text-gray-800 mb-2">Beneficios Ambientales y Reducción de Emisiones</h5>
+                <p class="mb-4 leading-relaxed">Los residuos orgánicos en rellenos producen metano (CH4), un gas con alto potencial de calentamiento global. El desvío de estos residuos hacia compostaje reduce la huella de carbono, lo cual se puede modelar mediante la ecuación:</p>
+                
+                <!-- Cuadro de Fórmula -->
+                <div class="bg-gray-800 text-white p-6 rounded-2xl text-center shadow-inner my-6">
+                    <div class="text-3xl font-mono tracking-widest mb-2 font-bold text-eco-light">M = T &middot; (Ee + Bn)</div>
                 </div>
                 
-                <div class="p-8">
-                    <!-- Área de selección -->
-                    <div class="flex flex-wrap justify-center gap-3 mb-10" id="item-buttons">
-                        <!-- Botones generados por JS -->
-                    </div>
+                <ul class="text-sm text-gray-600 mb-8 space-y-2 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                    <li><strong class="text-gray-800">M:</strong> Mitigación anual de gases de efecto invernadero (GEI).</li>
+                    <li><strong class="text-gray-800">T:</strong> Toneladas métricas anuales desviadas.</li>
+                    <li><strong class="text-gray-800">Ee:</strong> Emisión evitada por no confinar en vertederos (819.12 kg CO2 eq por tonelada).</li>
+                    <li><strong class="text-gray-800">Bn:</strong> Beneficio del proceso aeróbico de compostaje (-49.86 kg CO2 eq por tonelada).</li>
+                </ul>
+                <p class="mb-8 leading-relaxed text-sm bg-blue-50 text-blue-800 p-4 rounded-lg border-l-4 border-blue-500">
+                    <i class="fa-solid fa-circle-info mr-2"></i> Para una red de escuelas que procese 45,000 t/año, la mitigación total (M) alcanza las -39,104 t CO2 eq/año, equivalente a reducir aproximadamente -58 kg CO2 eq al año por estudiante.
+                </p>
 
-                    <!-- Mensaje de resultado -->
-                    <div id="resultado-box" class="hidden text-center mb-10 p-6 rounded-2xl border-2 transition-all duration-300">
-                        <div id="resultado-icono" class="text-5xl mb-4"></div>
-                        <h3 id="resultado-titulo" class="text-2xl font-bold mb-2"></h3>
-                        <p id="resultado-texto" class="text-lg"></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                    <!-- Retornos Pedagógicos -->
+                    <div>
+                        <h5 class="font-bold text-lg text-gray-800 mb-3"><i class="fa-solid fa-graduation-cap text-eco mr-2"></i> Retornos Pedagógicos</h5>
+                        <p class="text-sm text-gray-600 mb-3">El mantenimiento de composteras y huertos escolares sirve como un "laboratorio vivo" transversal:</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><i class="fa-solid fa-flask text-purple-500 w-5"></i> <strong>Ciencias y Química:</strong> Ciclo de nutrientes y microorganismos.</li>
+                            <li><i class="fa-solid fa-calculator text-blue-500 w-5"></i> <strong>Matemáticas:</strong> Medición de peso, volumen, pH y gráficos.</li>
+                            <li><i class="fa-solid fa-book-open text-orange-500 w-5"></i> <strong>Lenguaje:</strong> Debates, informes y habilidades comunicativas.</li>
+                        </ul>
                     </div>
-
-                    <!-- Contenedores Visuales -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div id="bin-organico" class="bin-card bg-gray-50 border-2 border-green-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
-                            <i class="fa-solid fa-leaf text-3xl text-green-500"></i>
-                            <span class="font-bold text-green-600">Orgánico</span>
-                        </div>
-                        <div id="bin-reciclable" class="bin-card bg-gray-50 border-2 border-blue-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
-                            <i class="fa-solid fa-recycle text-3xl text-blue-500"></i>
-                            <span class="font-bold text-blue-600">Reciclable</span>
-                        </div>
-                        <div id="bin-papel" class="bin-card bg-gray-50 border-2 border-yellow-400 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
-                            <i class="fa-solid fa-scroll text-3xl text-yellow-500"></i>
-                            <span class="font-bold text-yellow-600">Papel/Cartón</span>
-                        </div>
-                        <div id="bin-noreciclable" class="bin-card bg-gray-50 border-2 border-gray-500 rounded-xl p-4 flex flex-col items-center justify-center gap-2">
-                            <i class="fa-solid fa-trash text-3xl text-gray-500"></i>
-                            <span class="font-bold text-gray-600">No Reciclable</span>
-                        </div>
+                    <!-- Retorno Financiero -->
+                    <div>
+                        <h5 class="font-bold text-lg text-gray-800 mb-3"><i class="fa-solid fa-coins text-yellow-500 mr-2"></i> Retorno Financiero</h5>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                <span><strong>Sustitución de insumos:</strong> Se elimina el gasto en abonos químicos para áreas verdes al sustituirlos por compost propio.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                <span><strong>Disminución de tarifas:</strong> Al reducir el volumen enviado a disposición final, disminuyen los costos de recolección.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                <span><strong>Soberanía alimentaria:</strong> El compost se usa para cultivar hortalizas de autoconsumo en los comedores.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+
+                <div class="bg-gradient-to-br from-eco-light to-white p-8 rounded-2xl border border-eco-dark/20 mt-8">
+                    <h4 class="text-xl font-bold text-eco-dark mb-4"><i class="fa-solid fa-lightbulb text-yellow-500 mr-2"></i> Recomendaciones Estratégicas para la Gestión Sostenible</h4>
+                    <ul class="list-disc pl-5 space-y-3 text-gray-700 marker:text-eco-dark">
+                        <li><strong>Garantizar consistencia logística:</strong> Certificar que los residuos limpios se entreguen a asociaciones de recicladores formales para sostener la confianza de los estudiantes.</li>
+                        <li><strong>Diseñar puntos ecológicos intuitivos:</strong> Reemplazar botes aislados por estaciones tricolores con iconografía clara y ejemplos visuales de lo que se debe depositar.</li>
+                        <li><strong>Institucionalizar el vínculo curricular:</strong> Integrar el monitoreo de los residuos en las asignaturas evaluadas y apoyar el voluntariado ambiental estudiantil.</li>
+                        <li><strong>Establecer compras responsables:</strong> Modificar las compras de la institución priorizando artículos reutilizables, empaques biodegradables y el mantenimiento preventivo de su infraestructura.</li>
+                    </ul>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -474,7 +482,7 @@
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 nav.classList.add('shadow-md');
-                nav.classList.remove('shadow-sm');
+               f f nav.classList.remove('shadow-sm');
             } else {
                 nav.classList.remove('shadow-md');
                 nav.classList.add('shadow-sm');
